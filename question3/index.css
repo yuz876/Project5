@@ -1,0 +1,35 @@
+.div1 {
+    background-color: gray;
+    padding: 20px;
+    border-style: solid;
+    border-color: black;
+    width: 50%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .div2 {
+    background-color: orange;
+    padding: 20px;
+    border-style: solid;
+    border-color: black;
+    height: 60%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .div3 {
+    background-color: blue;
+    padding: 20px;
+    border-style: solid;
+    border-color: black;
+    height: 60%;
+    width: 60%;
+  }
+  
+  

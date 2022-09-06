@@ -1,0 +1,218 @@
+
+HTML
+1. What is the !DOCTYPE we place at the top of html file? Why we need it?
+
+!DOCTYPE is a declaration.
+All HTML documents must start with a <!DOCTYPE> declaration.
+The declaration is not an HTML tag. It is an "information" to the browser about what document type to expect.
+
+
+
+3. List some semantic tags in html5
+
+<form>, <table>, <p>, <i></i>
+
+4. Write a code snippet to achieve the requirements set up a link for user, user can click the link and redirect user to the YouTube in the separate tab.
+<a href="Youtubelinkhere">Youtube Link</a>
+
+
+5. What is difference between block element and inline element?
+ A block element always starts with a new line but inline not. 
+
+
+
+CSS
+
+1. How many ways you can embed css code into html file?
+Three Method:
+    Internal method
+    External method
+    Inline method
+
+2. What is css specificity? Place explain it in the desc order?
+
+If there are two or more CSS rules that point to the same element, the selector with the highest specificity value will "win", and its style declaration will be applied to that HTML element.
+
+Think of specificity as a score/rank that determines which style declaration are ultimately applied to an element.
+
+In the desc order:
+id selector
+class selector
+tag/element selector
+
+<style>
+    #demo {color: blue;}
+    .test {color: green;} 
+    p {color: red;} 
+</style>
+<p id="demo" class="test">Hello World!</p> // it will be blue
+
+
+3. What is pseudo element and pseudo class?
+
+A CSS pseudo-element is used to style specified parts of an element.
+
+For example, it can be used to:
+Style the first letter, or line, of an element
+Insert content before, or after, the content of an element
+
+
+A pseudo-class is used to define a special state of an element.
+
+For example, it can be used to:
+Style an element when a user mouses over it: hover
+Style visited and unvisited links differently: visited
+Style an element when it gets focus: focus
+
+
+4. Write code snippets to make element center horizontally, vertically and both?
+<div class="container">
+    <div class="element"></div>
+</div>
+
+horizontally:
+<style>
+    .container {
+    width: 500px;
+    height: 250px;
+    margin: 50px;
+    outline: solid 1px black;
+    display: flex;
+    justify-content: center;
+}
+.element {
+    width: 2px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+}
+</style>
+
+vertically:
+<style>
+    .container {
+  width: 500px;
+  height: 250px;
+  margin: 50px;
+  outline: solid 1px black;
+  display: flex;
+  align-items: center;
+}
+
+.element {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+}
+ </style>
+ 
+ both:
+ <style>
+     .container {
+  width: 500px;
+  height: 250px;
+  margin: 50px;
+  outline: solid 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+}
+</style>
+
+5. What is margin collapse?
+The top and bottom margins of blocks are sometimes combined 
+(collapsed) into a single margin whose size is the largest of 
+the individual margins (or just one of them, if they are equal), 
+a behavior known as margin collapsing.
+
+
+7. What's css box-sizing attributes?
+box-sizing calculates width and height for an element.
+
+8. Css to hide HTML elements and their differences?
+
+Two ways to hide HTML elements using css:
+display:none -- The element will be hidden, and the page will be displayed as if the element is not there.
+visibility:hidden -- the element will still take up the same space as before. The element will be hidden, but still affect the layout.
+
+
+
+9. What is css image sprites?
+An image sprite is a collection of images put into a single image.
+
+A web page with many images can take a long time to load and generates multiple server requests.
+
+Using image sprites will reduce the number of server requests and save bandwidth.
+
+It is often used to create an animation.
+ 
+
+
+JS:
+
+1. Please explain JS mechanism (sync and async code and event loop)
+sync code will return until the task is executed.
+async code will return call back function immediately when call them although the task is not executed. 
+event loop is a programming construct that waits for and dispatches events or messages in a program.
+
+
+2. What is the difference between function declaration and function expression?
+The main difference between a function expression and a function declaration is the function name, 
+which can be omitted in function expressions to create anonymous functions.
+Function expressions in JavaScript are not hoisted. 
+
+
+3. Let vs const vs var?
+The let declaration declares a block-scoped local variable, optionally initializing it to a value.
+The var statement declares a function-scoped or globally-scoped variable, optionally initializing it to a value.
+the variable declaired by var can be redeclared but let can't, 
+the value of variable declared by let can be changed but cant be redeclared.
+
+
+4. List ES6 features you know
+    <ul>
+        <li> let and const keywords</li>
+        <li> Arrow Functions</li>
+        <li>Multi-line Strings</li>
+        <li>Default Parameters</li>
+        <li>Template Literals</li>
+        <li>Destructuring Assignment</li>
+        <li> Enhanced Object Literals</li>
+        <li>Promises</li>
+        <li> Classes</li>
+        <li>Modules</li>
+    </ul>
+
+5. Function prototype methods, bind vs apply cs call?
+call and apply, they both trigger the function immediately
+different: the way they take in the input params
+
+bind does not trigger the function right away, but instead returns a new function
+
+
+6. How to deep copy object in JS?
+no changes will be carried over to copies
+
+7. Event bubbling vs Event Capturing ? What is Event Delegation?
+
+Event Bubbling: Whenever an event happens on an element, the event
+ handlers will first run on it and then on its parent and finally all 
+ the way up to its other ancestors.
+
+
+event delegation:
+
+8. What is Closure in JS?
+
+A closure is the combination of a function bundled 
+together (enclosed) with references to its surrounding 
+state (the lexical environment).
+
